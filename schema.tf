@@ -21,17 +21,17 @@ resource "null_resource" "schema" {
 
 depends_on = [aws_db_instance.mysql]  
 provisioner "local-exec" {
-        command = "cd /home/centos"
+        command =  "curl -s -L -o /home/centos/mysql.zip 'https://github.com/stans-robot-project/mysql/archive/main.zip'"
             
         }
 
 provisioner "local-exec" {
-        command = "curl -s -L -o /home/centos/mysql.zip 'https://github.com/stans-robot-project/mysql/archive/main.zip'"
+        command = "cd /tmp"
             
         }
 
 provisioner "local-exec" {
-        command = "unzip -o /home/centos/mysql.zip"
+        command = "unzip -o /tmp/mysql.zip"
             
         }
 
