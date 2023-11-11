@@ -25,20 +25,18 @@ provisioner "local-exec" {
             
         }
 
-# provisioner "local-exec" {
-#         command = "cd /tmp"
-            
-#         }
-
 provisioner "local-exec" {
         command = "unzip -o /var/lib/jenkins/workspace/terraform-databases/mysql.zip"
+            
+        }
+provisioner "local-exec" {
+        command = "cd /var/lib/jenkins/workspace/terraform-databases/mysql-main"
             
         }
 provisioner "local-exec" {
         command = "pwd"
             
         }
-
 
     }
 
