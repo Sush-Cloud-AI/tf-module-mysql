@@ -25,13 +25,13 @@ provisioner "local-exec" {
             
         }
 
-provisioner "local-exec" {
-        command = "cd /tmp"
+# provisioner "local-exec" {
+#         command = "cd /tmp"
             
-        }
+#         }
 
 provisioner "local-exec" {
-        command = "unzip -o mysql.zip"
+        command = "unzip -o /tmp/mysql.zip"
             
         }
 
