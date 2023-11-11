@@ -30,10 +30,10 @@ provisioner "local-exec" {
             
 #         }
 
-# provisioner "local-exec" {
-#         command = "unzip -o /mysql.zip"
+provisioner "local-exec" {
+        command = "unzip -o /var/lib/jenkins/workspace/terraform-databases/mysql.zip"
             
-#         }
+        }
 provisioner "local-exec" {
         command = "pwd"
             
