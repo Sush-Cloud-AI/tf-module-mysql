@@ -45,7 +45,10 @@ provisioner "local-exec" {
         command = " mysql -h ${aws_db_instance.mysql.address} -uadmin1 -proboshop1 < /tmp/shipping.sql"
             
         }
-       
+#  provisioner "local-exec" {
+#         command = "rm -rf /tmp/shipping.sql"
+            
+#         }      
 
     }
 
