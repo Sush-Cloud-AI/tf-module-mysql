@@ -31,11 +31,11 @@ provisioner "local-exec" {
 #         }
 
 provisioner "local-exec" {
-        command = "unzip /mysql.zip"
+        command = "unzip mysql.zip"
             
         }
 provisioner "local-exec" {
-        command = "ls -ltr /"
+        command = "pwd"
             
         }
 
