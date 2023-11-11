@@ -30,14 +30,14 @@ provisioner "local-exec" {
             
 #         }
 
-provisioner "local-exec" {
-        command = "unzip -o mysql.zip"
+# provisioner "local-exec" {
+#         command = "unzip -o /mysql.zip"
             
-        }
-provisioner "local-exec" {
-        command = "pwd"
+#         }
+# provisioner "local-exec" {
+#         command = "pwd"
             
-        }
+#         }
 
 
     }
