@@ -29,13 +29,13 @@
     provisioner "local-exec" {
             command = "unzip -o /tmp/mysql.zip"
         }
-    provisioner "local-exec" {
-            command = "cd /tmp/mysql-main"
-        }
+    # provisioner "local-exec" {
+    #         command = "cd /tmp/mysql-main"
+    #     }
 
-    provisioner "local-exec" {
-            command = "mysql -h ${aws_db_instance.mysql.address} -uadmin1 -proboShop1 < shipping.sql"
-        }
+    # provisioner "local-exec" {
+    #         command = "mysql -h ${aws_db_instance.mysql.address} -uadmin1 -proboShop1 < shipping.sql"
+    #     }
     }
 
 
