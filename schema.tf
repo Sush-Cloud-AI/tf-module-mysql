@@ -17,15 +17,15 @@
 # }
 
 # # # # Injecting the schema
-    resource "null_resource" "schema" {
+resource "null_resource" "schema" {
 
-    depends_on = [aws_db_instance.mysql]  
-    provisioner "local-exec" {
-            command = <<EOF
-                cd /tmp
-                curl -s -L -o /tmp/mysql.zip "https://github.com/stans-robot-project/mysql/archive/main.zip"
+depends_on = [aws_db_instance.mysql]  
+provisioner "local-exec" {
+        command = <<EOF
+            cd /tmp
+            curl -s -L -o /tmp/mysql.zip "https://github.com/stans-robot-project/mysql/archive/main.zip"
               
-            EOF
-            }
+        EOF
         }
+    }
 
