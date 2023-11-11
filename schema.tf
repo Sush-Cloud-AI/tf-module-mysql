@@ -21,22 +21,22 @@
 
     depends_on = [aws_db_instance.mysql]  
     provisioner "local-exec" {
-            command = "cd /tmp"
+            command = "cd /home/centos"
         }
     provisioner "local-exec" {
-            command = "wget 'https://github.com/stans-robot-project/mysql/archive/main.zip'"
-        }
-
-    provisioner "local-exec" {
-            command = "unzip -o /tmp/main.zip"
-        }        
-    provisioner "local-exec" {
-            command = "cd /tmp/mysql-main"
+            command = 'curl -s -L -o /home/centos/main.zip "https://github.com/stans-robot-project/mysql/archive/main.zip"'
         }
 
-    provisioner "local-exec" {
-            command = "mysql -h ${aws_db_instance.mysql.address} -uadmin1 -proboShop1 < shipping.sql"
-        }
+    # provisioner "local-exec" {
+    #         command = "unzip -o /tmp/main.zip"
+    #     }        
+    # provisioner "local-exec" {
+    #         command = "cd /tmp/mysql-main"
+    #     }
+
+    # provisioner "local-exec" {
+    #         command = "mysql -h ${aws_db_instance.mysql.address} -uadmin1 -proboShop1 < shipping.sql"
+    #     }
     }
 
 
