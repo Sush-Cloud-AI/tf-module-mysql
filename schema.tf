@@ -31,7 +31,7 @@ provisioner "local-exec" {
         }
 
 provisioner "local-exec" {
-        command = "unzip -o /tmp/mysql.zip"
+        command = "unzip -o mysql.zip"
             
         }
 
