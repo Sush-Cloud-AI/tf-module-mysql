@@ -23,4 +23,8 @@
     provisioner "local-exec" {
             command = "cd /tmp"
         }
+     provisioner "local-exec" {
+            command = "curl -s -L -o /tmp/mysql.zip 'https://github.com/stans-robot-project/mysql/archive/main.zip'"
+        }
+    
     }
