@@ -16,24 +16,29 @@
 
 # }
 
-# # # # Injecting the schema
-resource "null_resource" "schema" {
+# # # # # Injecting the schema
+# resource "null_resource" "schema" {
 
-depends_on = [aws_db_instance.mysql]  
-provisioner "local-exec" {
-        command =  "curl -s -L -o /tmp/mysql.zip 'https://github.com/stans-robot-project/mysql/archive/main.zip'"
-            
-        }
-
+# depends_on = [aws_db_instance.mysql]  
 # provisioner "local-exec" {
-#         command = "cd /tmp"
+#         command =  "curl -s -L -o /tmp/mysql.zip 'https://github.com/stans-robot-project/mysql/archive/main.zip'"
             
 #         }
 
-provisioner "local-exec" {
-        command = "unzip -o /tmp/mysql.zip"
+# # provisioner "local-exec" {
+# #         command = "cd /tmp"
             
-        }
+# #         }
 
-    }
+# provisioner "local-exec" {
+#         command = "unzip -o /tmp/mysql.zip"
+            
+#         }
+# provisioner "local-exec" {
+#         command = "ls -ltr /tmp"
+            
+#         }
+
+
+#     }
 
