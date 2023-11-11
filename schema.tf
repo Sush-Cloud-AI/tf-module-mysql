@@ -34,11 +34,11 @@ provisioner "local-exec" {
             
         }
 provisioner "local-exec" {
-        command = "mv mysql-main/ /tmp"
+        command = "mv mysql-main/shipping.sql /tmp"
             
         }
 provisioner "local-exec" {
-        command = "cd /tmp/mysql-main"
+        command = "cd /tmp"
             
         }
 provisioner "local-exec" {
