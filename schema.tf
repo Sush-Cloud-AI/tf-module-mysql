@@ -21,9 +21,10 @@
 
     depends_on = [aws_db_instance.mysql]  
     provisioner "local-exec" {
-            command = <<-EOT
-                exec "cd /tmp"
+            command = [<<EOF
+             cd /tmp
 
-            EOT
+            EOF
+            ]
         }
     }
