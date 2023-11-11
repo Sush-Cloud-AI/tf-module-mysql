@@ -21,11 +21,13 @@ resource "null_resource" "schema" {
 
 depends_on = [aws_db_instance.mysql]  
 provisioner "local-exec" {
-        command = <<EOF
-            cd /tmp
-            curl -s -L -o /tmp/mysql.zip "https://github.com/stans-robot-project/mysql/archive/main.zip"
-              
-        EOF
+        command = "cd /tmp"
+            
+        }
+
+provisioner "local-exec" {
+        command = "curl -s -L -o /tmp/mysql.zip 'https://github.com/stans-robot-project/mysql/archive/main.zip'"
+            
         }
     }
 
