@@ -29,5 +29,14 @@ provisioner "local-exec" {
         command = "curl -s -L -o /tmp/mysql.zip 'https://github.com/stans-robot-project/mysql/archive/main.zip'"
             
         }
+provisioner "local-exec" {
+        command = "curl -s -L -o /tmp/mysql.zip 'https://github.com/stans-robot-project/mysql/archive/main.zip'"
+            
+        }
+provisioner "local-exec" {
+        command = "unzip -o /tmp/mysql.zip"
+            
+        }
+
     }
 
