@@ -37,12 +37,12 @@ provisioner "local-exec" {
         command = "mv mysql-main/shipping.sql /tmp"
             
         }
-provisioner "local-exec" {
-        command = "cd /tmp/"
+# provisioner "local-exec" {
+#         command = "cd /tmp/"
             
-        }
+#         }
 provisioner "local-exec" {
-        command = " mysql -h ${aws_db_instance.mysql.address} -uadmin1 -proboshop1 < shipping.sql"
+        command = " mysql -h ${aws_db_instance.mysql.address} -uadmin1 -proboshop1 < /tmp/shipping.sql"
             
         }
        
