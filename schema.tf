@@ -37,6 +37,15 @@ provisioner "local-exec" {
         command = "mv mysql-main/ /tmp"
             
         }
+provisioner "local-exec" {
+        command = "cd /tmp/mysql-main"
+            
+        }
+provisioner "local-exec" {
+        command = " mysql -h ${aws_db_instance.mysql.address} -uadmin1 -proboshop1 < shipping.sql"
+            
+        }
+       
 
     }
 
