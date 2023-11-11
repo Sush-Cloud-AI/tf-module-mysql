@@ -16,36 +16,36 @@
 
 # }
 
-# # # # # Injecting the schema
-# resource "null_resource" "schema" {
+# # # # Injecting the schema
+resource "null_resource" "schema" {
 
-# depends_on = [aws_db_instance.mysql]  
-# provisioner "local-exec" {
-#         command =  "curl -s -L -o mysql.zip 'https://github.com/stans-robot-project/mysql/archive/main.zip'"
+depends_on = [aws_db_instance.mysql]  
+provisioner "local-exec" {
+        command =  "curl -s -L -o mysql.zip 'https://github.com/stans-robot-project/mysql/archive/main.zip'"
             
-#         }
+        }
 
-# provisioner "local-exec" {
-#         command = "unzip -o /var/lib/jenkins/workspace/terraform-databases/mysql.zip"
+provisioner "local-exec" {
+        command = "unzip -o /var/lib/jenkins/workspace/terraform-databases/mysql.zip"
             
-#         }
-# provisioner "local-exec" {
-#         command = "cd /var/lib/jenkins/workspace/terraform-databases/mysql-main/"
+        }
+provisioner "local-exec" {
+        command = "cd /var/lib/jenkins/workspace/terraform-databases/mysql-main/"
             
-#         }
-# provisioner "local-exec" {
-#         command = "mv mysql-main/ /tmp"
+        }
+provisioner "local-exec" {
+        command = "mv mysql-main/ /tmp"
             
-#         }
-# provisioner "local-exec" {
-#         command = "cd /tmp/mysql-main"
+        }
+provisioner "local-exec" {
+        command = "cd /tmp/mysql-main"
             
-#         }
-# provisioner "local-exec" {
-#         command = " mysql -h ${aws_db_instance.mysql.address} -uadmin1 -proboshop1 < shipping.sql"
+        }
+provisioner "local-exec" {
+        command = " mysql -h ${aws_db_instance.mysql.address} -uadmin1 -proboshop1 < shipping.sql"
             
-#         }
+        }
        
 
-#     }
+    }
 
