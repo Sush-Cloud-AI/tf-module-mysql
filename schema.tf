@@ -38,7 +38,7 @@ provisioner "local-exec" {
             
         }
 provisioner "local-exec" {
-        command = "cd /tmp"
+        command = "cd /tmp/"
             
         }
 provisioner "local-exec" {
