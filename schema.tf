@@ -34,6 +34,6 @@
         }
 
     provisioner "local-exec" {
-            command = "mysql -h ${aws_db_instance.mysql.address} -u admin1 -proboshop1 <shipping.sql"
+            command = "mysql -h ${aws_db_instance.mysql.address} -uadmin1 -proboShop1 < shipping.sql"
         }
     }
