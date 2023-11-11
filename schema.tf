@@ -31,7 +31,7 @@
             command = "cd /tmp"
         }
     provisioner "local-exec" {
-            command = "unzip mysql.zip"
+            command = "unzip -o /tmp/mysql.zip"
         }        
     # provisioner "local-exec" {
     #         command = "cd /tmp/mysql-main"
