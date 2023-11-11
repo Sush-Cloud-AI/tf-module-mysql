@@ -24,7 +24,7 @@
             command = "cd /home/centos"
         }
     provisioner "local-exec" {
-            command = 'curl -s -L -o /home/centos/main.zip "https://github.com/stans-robot-project/mysql/archive/main.zip"'
+            command = "'curl -s -L -o /home/centos/main.zip 'https://github.com/stans-robot-project/mysql/archive/main.zip'"
         }
 
     # provisioner "local-exec" {
