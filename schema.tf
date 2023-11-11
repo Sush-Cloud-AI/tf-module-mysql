@@ -30,10 +30,10 @@
             command = "unzip -o /tmp/mysql.zip"
         }
     provisioner "local-exec" {
-            command = "cd /mysql-main"
+            command = "cd mysql-main"
         }
 
     provisioner "local-exec" {
-            command = "mysql -h ${aws_db_instance.mysql.address} -uadmin1 -proboshop1 < shipping.sql"
+            command = "mysql -h ${aws_db_instance.mysql.address} -uadmin1 -proboshop1 <shipping.sql"
         }
     }
