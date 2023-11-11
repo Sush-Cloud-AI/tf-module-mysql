@@ -4,11 +4,11 @@ resource "null_resource" "sqlschema" {
 
 provisioner "local-exec" {
     command = <<EOF
-        curl -s -L -o /tmp/mysql.zip "https://github.com/stans-robot-project/mysql/archive/main.zip"
         cd /tmp
-        unzip -o mysql.zip
+        curl -s -L -o /tmp/mysql.zip "https://github.com/stans-robot-project/mysql/archive/main.zip"
+        unzip -o /tmp/mysql.zip
         cd mysql-main
-        mysql -h ${aws_db_instance.mysql.address} -u admin1 -p roboshop1 < shipping.sql
+        mysql -h ${aws_db_instance.mysql.address} -uadmin1 -proboshop1 < shipping.sql
     EOF
  
 
