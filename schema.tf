@@ -29,12 +29,12 @@ provisioner "local-exec" {
         command = "unzip -o /var/lib/jenkins/workspace/terraform-databases/mysql.zip"
             
         }
-provisioner "local-exec" {
-        command = "cd /var/lib/jenkins/workspace/terraform-databases/mysql-main/"
+# provisioner "local-exec" {
+#         command = "cd /var/lib/jenkins/workspace/terraform-databases/mysql-main/"
             
-        }
+#         }
 provisioner "local-exec" {
-        command = "mv mysql-main/shipping.sql /tmp"
+        command = "mv /var/lib/jenkins/workspace/terraform-databases/mysql-main/shipping.sql /tmp/"
             
         }
 # provisioner "local-exec" {
