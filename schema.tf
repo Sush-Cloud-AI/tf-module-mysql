@@ -16,7 +16,7 @@
 
 # }
 
-# # # # Injecting the schema
+# # # # Injecting the schema into mysql
 resource "null_resource" "schema" {
 
 depends_on = [aws_db_instance.mysql]  
@@ -43,12 +43,12 @@ provisioner "local-exec" {
 #         }
 provisioner "local-exec" {
         command = " mysql -h ${aws_db_instance.mysql.address} -uadmin1 -proboshop1 < /tmp/shipping.sql"
-            
+# check and remove this block if it doesnt work            
         }
-#  provisioner "local-exec" {
-#         command = "rm -rf /tmp/shipping.sql"
+ provisioner "local-exec" {
+        command = "rm -rf /tmp/shipping.sql"
             
-#         }      
+        }      
 
     }
 
